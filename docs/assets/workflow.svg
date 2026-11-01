@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+<title id="title">Commodity Factor Lab research workflow</title><desc id="desc">Versioned contract snapshots flow through dated eligibility and economic hypotheses into diagnostics and a separate synthetic settlement ledger.</desc>
+<rect width="1200" height="260" rx="18" fill="#122d42"/>
+<text x="42" y="43" fill="#7fbfcd" font-family="Segoe UI, sans-serif" font-size="12" letter-spacing="3">COMMODITY FACTOR LAB</text>
+<text x="42" y="83" fill="#f0f6fa" font-family="Segoe UI, sans-serif" font-size="26" font-weight="600">A research pipeline you can inspect</text>
+<g font-family="Segoe UI, sans-serif"><g fill="#1d3c52" stroke="#38556b"><rect x="42" y="120" width="202" height="85" rx="9"/><rect x="270" y="120" width="202" height="85" rx="9"/><rect x="498" y="120" width="202" height="85" rx="9"/><rect x="726" y="120" width="202" height="85" rx="9"/><rect x="954" y="120" width="202" height="85" rx="9"/></g>
+<g fill="#f0f6fa" font-size="16" font-weight="600"><text x="60" y="153">01  Snapshots</text><text x="288" y="153">02  Quality</text><text x="516" y="153">03  Fixed protocol</text><text x="744" y="153">04  Cash ledger</text><text x="972" y="153">05  Evidence</text></g>
+<g fill="#9ab0c3" font-size="12"><text x="60" y="181">Sources / vintages / hashes</text><text x="288" y="181">Conflicts / causal eligibility</text><text x="516" y="181">Carry / basis momentum / stock</text><text x="744" y="181">Integer lots / fees / margin</text><text x="972" y="181">HAC / BY / failure records</text></g>
+<g fill="#7fbfcd" font-size="19"><text x="250" y="169">›</text><text x="478" y="169">›</text><text x="706" y="169">›</text><text x="934" y="169">›</text></g></g>
+<text x="42" y="236" fill="#9ab0c3" font-family="Segoe UI, sans-serif" font-size="11">CONTROLLED COMPARISONS  ·  COMPLETE RESULTS  ·  NO CONFIRMED INVESTMENT ALPHA</text></svg>
