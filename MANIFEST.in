@@ -1,0 +1,11 @@
+include README.md CONTRIBUTING.md
+include configs/validation_plan.json
+recursive-include configs *.toml
+recursive-include docs *.md *.svg *.png *.jpg
+prune docs/collaboration
+prune docs/drafts
+recursive-exclude docs *_draft*.md draft*.md
+recursive-include data README.md
+recursive-include reports README.md
+recursive-include tests *.py
+recursive-include scripts *.py
