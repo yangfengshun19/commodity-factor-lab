@@ -1,0 +1,36 @@
+[paths]
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+labels = "reports/runs/curve_expanded/20261029T045315046146Z/labels.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+original_daily = "reports/runs/curve_expanded/20261029T045315046146Z/daily_ic.csv"
+original_summary = "reports/runs/curve_expanded/20261029T045315046146Z/summary.csv"
+prior_registry = "reports/runs/capacity_study/20261031T093946179066Z/registered_exploration.csv"
+methodology = "docs/factor_evidence_methodology.md"
+output = "reports/runs/factor_evidence"
+
+[input_hashes]
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+labels = "8f12664b379eaa938392c0f8912b5309b1484684b88bfbd767638dc7120b2fde"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+original_daily = "34f6a4134081b361a6c6423cd8b566937382a0ad7bab47f7734242ea9e0d41fe"
+original_summary = "cb43d65d9480a3e4201f6e1cb4166dc855515cd107564e0da821aff6803e9700"
+prior_registry = "68fed9b21b68a586bcfb853bd305cf22c1dc6f3d416e1194319846271a6c0d2f"
+
+[analysis]
+start = "2023-01-01"
+end = "2025-12-31"
+codes = ["cu", "al", "zn", "rb", "hc", "ru", "bu", "sp", "au", "ag"]
+signals = ["carry", "basis_momentum", "inventory_scarcity"]
+common_features = ["momentum_126d", "carry", "basis_momentum", "inventory_scarcity"]
+minimum_assets = 8
+primary_hac_lags = 40
+sensitivity_hac_lags = [20, 80]
+minimum_inference_observations = 252
+alpha = 0.05
+current_family_size = 3
+resolution_target_rank_ic = 0.05
+planning_power = 0.8
+registered_before = 17
+registered_after = 20
+independent_new_sample = false
+investment_claim_eligible = false

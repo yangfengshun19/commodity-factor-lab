@@ -1,0 +1,52 @@
+# One retrospective, descriptive forecast experiment; frozen before new outcome computation.
+registered_utc = "2026-10-30T10:00:22+00:00"
+[paths]
+references = "reports/runs/nbs_history/20261030T080351138209Z/reference_input_events.csv"
+history_run = "reports/runs/nbs_history/20261030T080351138209Z/run.json"
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+labels = "reports/runs/curve_expanded/20261029T045315046146Z/labels.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+bars = "data/market/shfe_all_registered_2020_2025/bars.csv"
+prior_exploration = "reports/runs/position_availability/20261029T083240032956Z/registered_exploration.csv"
+output = "reports/runs/nbs_prediction"
+[input_hashes]
+references = "ee08468927e19a19a22231e8d56fd376b55ea3f6650ef0360422dd376a242d47"
+history_run = "1081fd458e80304935b8cdd2e94f3b6a0782f773d8c49418faebf42a97816140"
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+labels = "8f12664b379eaa938392c0f8912b5309b1484684b88bfbd767638dc7120b2fde"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+bars = "a584b8bbf530b9b86ac7595dee67462f99c904f51ad95b22338c12ab676078f5"
+prior_exploration = "934dd70469d099c3f95e0f73e10c558bc39fd744121d7edfc518fd6bbafecf8f"
+[study]
+kind = "retrospective_descriptive_event_forecast"
+codes = ["al", "cu", "hc", "rb", "ru", "sp", "zn"]
+forecast_start = "2023-01-01"
+forecast_end = "2025-12-31"
+minimum_training_events_per_code = 60
+model = "separate_code_expanding_ols_train_only_standardization"
+controls = ["futures_since_previous_release", "carry", "momentum_126d", "basis_momentum"]
+signal = "reference_log_change"
+require_adjacent_calendar_periods = true
+require_identical_comparability_key = true
+training_target_exit_strictly_before_signal_date = true
+entry_lag_sessions = 1
+holding_sessions = 20
+forecast_without_observed_target = true
+same_training_and_scoring_rows_for_all_models = true
+missing_values_filled = false
+window_or_sign_search = false
+[evaluation]
+primary = "one_minus_event_mean_augmented_mse_over_event_mean_futures_mse"
+aggregate = "equal_code_within_release_then_equal_release"
+additional_baselines = ["training_mean", "zero"]
+breakdowns = ["year", "code"]
+formal_p_value_computed = false
+reason = "Nested recursive, overlapping, unbalanced event forecasts need separately calibrated inference; ordinary DM/HAC t is not claimed valid."
+registered_experiments_before = 14
+registered_experiments_after = 15
+new_experiment_p_value_status = "unavailable_descriptive_screen"
+new_experiment_counts_in_BY_family_as_p_one = true
+independent_new_sample = false
+historical_first_vintage_certified = false
+strict_spot_basis_claim_eligible = false
+investment_claim_eligible = false

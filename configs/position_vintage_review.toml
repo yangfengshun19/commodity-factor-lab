@@ -1,0 +1,41 @@
+# Register before alternate-source probes and current-cutoff predictive calculation.
+registered_utc = "2026-10-29T08:17:45.354708+00:00"
+[paths]
+baseline_run = "reports/runs/position_study/20261029T080001510886Z"
+raw = "data/market/shfe_positions_2022_2025"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+labels = "reports/runs/curve_expanded/20261029T045315046146Z/labels.csv"
+prior_exploration = "reports/runs/position_study/20261029T080001510886Z/registered_exploration.csv"
+probe = "data/market/position_vintage_probe_20261029"
+output = "reports/runs/position_availability"
+[input_hashes]
+baseline_run = "a39a28a21463161b6c7ca865c2e1fe16b1cd982095f57ff49345d18be4a5ed94"
+qualified_ranks = "38eb865e307c58e5706a871355bdfd3a5c5222de81241e6369cffdfb2b01bc35"
+strict_panel = "c2a8da8422e361d6fddcfc9e0e40b7645376e067dbbd883a34dca83408c51840"
+strict_daily = "73c5b3321d165174d56dc186387461d52578579e463b6a06674148ada66ebbef"
+raw_manifest = "1ec78c9571ea25c4f366535a912bd64c55010b41cb28c1eaa05e563303fce8d0"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+labels = "8f12664b379eaa938392c0f8912b5309b1484684b88bfbd767638dc7120b2fde"
+prior_exploration = "31e7718b0fe808c10dd0f509e976fbd6f2b651c6ab759693099903a265e7b849"
+[probe]
+dates = ["20240219", "20240906", "20241008", "20250127"]
+legacy_endpoint = "https://tsite.shfe.com.cn/data/dailydata/kx/pm{date}.dat"
+current_alias_endpoint = "https://www.shfe.cn/data/tradedata/future/dailydata/pm{date}.dat"
+recovery_requires_historical_capture_before_cutoff = true
+timestamp_only_copy_is_not_recovery_evidence = true
+[study]
+evaluation_start = "2023-01-01"
+lookback_sessions = 20
+require_all_window_sessions = true
+historical_availability = "all window records published by current signal cutoff"
+direction = 1
+controls = ["momentum_126d", "carry", "basis_momentum"]
+min_assets = 8
+hac_lags = 40
+min_inference_obs = 252
+holding_sessions = 20
+entry_lag_sessions = 1
+analysis_role = "retrospective information-set specification comparison; not independent discovery"
+timestamp_ignored_diagnostic = "coverage only; no predictive statistics"

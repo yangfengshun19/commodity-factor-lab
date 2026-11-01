@@ -1,0 +1,38 @@
+# Registered before the extension IC calculation; retrospective, not independent discovery.
+registered_utc = "2026-10-29T05:42:06.530739+00:00"
+[paths]
+baseline_run = "reports/runs/curve_expanded/20261029T045315046146Z"
+legacy_data = "data/raw"
+output = "reports/runs/factor_extension"
+registry = "configs/factor_decisions.toml"
+prior_exploration = "reports/audits/validation_20261029/registered_exploration.csv"
+[input_hashes]
+prior_exploration = "eb6416cc36d581c1f17f20bd3cbc2c6ab07abb2531c03798ca7aa65c6a5270df"
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+labels = "8f12664b379eaa938392c0f8912b5309b1484684b88bfbd767638dc7120b2fde"
+run = "6615983a3848feb2a3ef86fca0400a8fd3722a6ee92912f2be244b9024052433"
+[study]
+evaluation_start = "2023-01-01"
+min_assets = 8
+hac_lags = 40
+min_inference_obs = 252
+holding_sessions = 20
+entry_lag_sessions = 1
+[[hypotheses]]
+name = "relative_basis"
+status = "ready"
+direction = 1
+controls = ["momentum_126d", "carry", "basis_momentum"]
+reason = "Test incremental curve shape under the existing fixed maturity/liquidity policy; not a full paper replication."
+[[hypotheses]]
+name = "normalized_position_flow"
+status = "gated_source_validation"
+direction = 1
+controls = ["momentum_126d", "carry", "basis_momentum"]
+reason = "No certified same-contract, complete-rank, publication-aware position panel."
+[[hypotheses]]
+name = "spot_basis"
+status = "gated_source_validation"
+direction = 1
+controls = ["momentum_126d", "carry", "basis_momentum"]
+reason = "No verified grade/location/tax/unit/contract mapping and publication-aware spot panel."

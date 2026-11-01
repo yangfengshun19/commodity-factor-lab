@@ -1,0 +1,31 @@
+# Source identities recorded before the bounded local sampling run.
+# A current official document is not certification of historical specifications.
+[historical_pages]
+"2020-01-02" = "https://www.sge.com.cn/sjzx/mrhqsj/5146750?top=789398439266459648"
+"2023-12-29" = "https://www.sge.com.cn/sjzx/mrhqsj/10005759"
+[daily_query]
+endpoint = "https://www.sge.com.cn/sjzx/quotation_daily_new"
+[[documents]]
+id = "au9995"
+url = "https://www.sge.com.cn/h5_cpfw/Au9995H5"
+purpose = "Physical T+0 gold; quote CNY/g; grade and delivery form"
+[[documents]]
+id = "au9999"
+url = "https://www.sge.com.cn/h5_cpfw/Au9999H5"
+purpose = "Physical T+0 gold; quote CNY/g; trade unit differs from quote unit"
+[[documents]]
+id = "ag2010"
+url = "https://www.sge.com.cn/jjsnotice/505003"
+purpose = "Dated 2010 Ag99.99 listing announcement; physical T+2, CNY/kg"
+[[documents]]
+id = "shfe_ag"
+url = "https://www.shfe.com.cn/products/futures/metal/ferrousandpreciousmetal/ag_f/"
+purpose = "Current silver futures quote unit and delivery grade; not full historical mapping"
+[[documents]]
+id = "shfe_au"
+url = "https://www.shfe.com.cn/products/futures/metal/ferrousandpreciousmetal/au_f/appendix/202105/t20210521_797346.html"
+purpose = "Gold futures delivery annex; current public document, not per-day certification"
+[[documents]]
+id = "gold_tax_2025"
+url = "https://shanghai.chinatax.gov.cn/zcfw/zcfgk/zzs/202511/t478143.html"
+purpose = "2025 No.11 gold tax announcement effective Nov 1; withdrawal-dependent policy"

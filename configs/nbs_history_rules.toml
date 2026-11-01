@@ -1,0 +1,37 @@
+# Official cancellation evidence; frozen before the expanded article capture.
+[[cancellations]]
+period = "2021-02-middle"
+schedule_id = "schedule_2021"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202302/t20230222_1918258.html"
+source_sha256 = "8149a955a0ae048661cf695e9a1c0699748f99b04a75f80e1e3343836b987a07"
+evidence_fragment = "2月中旬的旬报因春节因素取消发布"
+[[cancellations]]
+period = "2022-02-early"
+schedule_id = "schedule_2022"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202302/t20230222_1918259.html"
+source_sha256 = "663beb126cafdee5b6aa43bf6c6a10b868517d65fcefa2c3baf7f4425cea7537"
+evidence_fragment = "2月上旬的数据因春节因素取消发布"
+[[cancellations]]
+period = "2023-01-late"
+schedule_id = "schedule_2023"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202302/t20230222_1918220.html"
+source_sha256 = "2959356f211e6e9c14570f0c0ee080dfca1bb584f899dfaafe888f15e331f386"
+evidence_fragment = "1月下旬的流通领域生产资料价格旬报因春节因素取消发布"
+[[cancellations]]
+period = "2024-02-middle"
+schedule_id = "schedule_2024"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202312/t20231226_1945787.html"
+source_sha256 = "5f4f545104d7b6bb7f8a75261f7f4171095479f57ce82da974ac303f51b49320"
+evidence_fragment = "2月中旬的流通领域生产资料价格旬报因春节因素取消发布"
+[[cancellations]]
+period = "2025-01-late"
+schedule_id = "schedule_2025"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202412/t20241230_1957931.html"
+source_sha256 = "dfb9364d1af43ca2a864f55c5793ab618d312fee8081c29aa0a2992e9a636741"
+evidence_fragment = "1月下旬、10月上旬的流通领域生产资料价格旬报因春节、国庆节假日因素取消发布"
+[[cancellations]]
+period = "2025-10-early"
+schedule_id = "schedule_2025"
+source_url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202412/t20241230_1957931.html"
+source_sha256 = "dfb9364d1af43ca2a864f55c5793ab618d312fee8081c29aa0a2992e9a636741"
+evidence_fragment = "1月下旬、10月上旬的流通领域生产资料价格旬报因春节、国庆节假日因素取消发布"

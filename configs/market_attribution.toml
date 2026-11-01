@@ -1,0 +1,25 @@
+# Descriptive accounting drill-down of the existing experiment, after its result was viewed.
+[paths]
+source_run = "reports/runs/market_benchmark/20261031T063013399593Z/run.json"
+output = "reports/runs/market_attribution"
+
+[input_hashes]
+source_run = "6400702e470e4c42f40a708d518a1b6b10938b4a32004caeb1a28fb6fc34aab7"
+
+[analysis]
+scenario = "cost5_margin0.2_assumed_full_open"
+books = ["equal_weight_long", "momentum", "momentum_carry"]
+comparison = "momentum_carry_minus_momentum"
+cash_contribution_denominator = "initial_cash"
+risk_covariance_ddof = 1
+annualization_sessions = 252
+report_all_codes_and_years = true
+exposure_measure = "end_of_day_settlement_notional"
+drawdown_method = "own_book_maximum_drawdown_including_initial_cash"
+target_measures = ["max_absolute_weight", "sum_squared_weights", "effective_absolute_names"]
+formal_p_value_computed = false
+new_strategy_generated = false
+new_prediction_test = false
+causal_mechanism_identified = false
+independent_new_sample = false
+known_exploration_family = 16

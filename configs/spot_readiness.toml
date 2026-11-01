@@ -1,0 +1,58 @@
+# Data-readiness assay only; no return labels or hypothesis tests are read.
+registered_utc = "2026-10-29T09:11:54.049129+00:00"
+[paths]
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+prior_exploration = "reports/runs/position_availability/20261029T083240032956Z/registered_exploration.csv"
+output = "reports/runs/spot_readiness"
+raw = "data/market/sge_spot_probe_20261029"
+[input_hashes]
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+prior_exploration = "934dd70469d099c3f95e0f73e10c558bc39fd744121d7edfc518fd6bbafecf8f"
+[probe]
+dates = ["2020-01-02", "2023-12-29", "2024-01-30", "2024-02-12", "2024-02-19", "2024-06-28", "2024-12-31", "2025-06-30", "2025-10-31", "2025-11-03", "2025-11-04", "2025-12-31"]
+holiday_negative_control = "2024-02-12"
+new_endpoint_start = "2024-01-01"
+maximum_response_bytes = 4000000
+minimum_interval_seconds = 0.8
+stop_after_consecutive_failures = 3
+[study]
+kind = "data_readiness_only"
+prediction_tests_added = 0
+predictive_statistics_computed = false
+min_inference_assets_unchanged = 8
+spot_price_field = "close"
+require_positive_volume = true
+require_publisher_clock = true
+allow_assumed_publication_lag = false
+require_brand_location_tax_mapping = true
+diagnostic_formula = "log(spot_close_in_futures_quote_units / frozen_selected_contract_settlement)"
+gold_tax_effective_date = "2025-11-01"
+spot_basis_claim_eligible = false
+[[instruments]]
+symbol = "Au99.95"
+code = "au"
+kind = "physical_cash_t0"
+quote_unit = "CNY/g"
+minimum_purity_percent = 99.95
+quote_multiplier = 1.0
+brand_location_tax_history_verified = false
+[[instruments]]
+symbol = "Au99.99"
+code = "au"
+kind = "physical_cash_t0"
+quote_unit = "CNY/g"
+minimum_purity_percent = 99.99
+quote_multiplier = 1.0
+brand_location_tax_history_verified = false
+[[instruments]]
+symbol = "Ag99.99"
+code = "ag"
+kind = "physical_spot_t2"
+quote_unit = "CNY/kg"
+minimum_purity_percent = 99.99
+quote_multiplier = 1.0
+brand_location_tax_history_verified = false
+[negative_controls]
+rejected_symbols = ["Au(T+D)", "Ag(T+D)", "mAu(T+D)", "iAu99.99"]

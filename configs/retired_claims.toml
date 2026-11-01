@@ -1,0 +1,39 @@
+# This register withdraws claims from the maintained research narrative.
+# Original thesis files remain an archival record, not current evidence.
+review_date = "2026-10-29"
+
+[[claims]]
+id = "agriculture_reversal_performance"
+statement = "Cumulative net return 17.12%, Sharpe 0.94, maximum drawdown -6.81%"
+status = "unreproduced_withdrawn"
+reason = "No matching complete strategy entry point or traceable run found in supplied material. Requires independent replication."
+
+[[claims]]
+id = "warrant_universal_alpha"
+statement = "Warehouse warrant count is a robust, universally predictive commodity alpha"
+status = "unsupported_withdrawn"
+reason = "35 observed dates, incompatible units, contradictory reported IC signs and unverified publication times."
+
+[[claims]]
+id = "warrant_old_performance"
+statement = "Nonferrous warrant strategy has a uniquely reproducible historical performance"
+status = "contradictory_withdrawn"
+reason = "Thesis table reports net annual return 1.62% and Sharpe 0.1107; stored CSV reports 187.23% and 7.5953. No version reconciliation supplied."
+
+[[claims]]
+id = "trend_market_efficiency"
+statement = "Weak daily cross-sectional trend IC proves trend is fully priced and the market follows a random walk"
+status = "unsupported_withdrawn"
+reason = "Failure to detect one predictor is not a market efficiency test; time-series and cross-sectional hypotheses and horizons differ."
+
+[[claims]]
+id = "twap_risk_parity_innovation"
+statement = "Three-day signal smoothing implements TWAP and independent scoring establishes risk parity"
+status = "incorrect_terminology_removed"
+reason = "A moving-average signal filter is not a TWAP execution schedule. Independent scoring does not establish equal risk contributions."
+
+[[claims]]
+id = "sector_heterogeneity_proven"
+statement = "Different sector ICIR and OLS t-statistics prove sector heterogeneity"
+status = "unsupported_withdrawn"
+reason = "Different samples and separate significance tests are not a formal test of between-sector differences."

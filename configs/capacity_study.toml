@@ -1,0 +1,25 @@
+# New retrospective execution experiment; historical results have been viewed.
+[paths]
+source_run = "reports/runs/market_benchmark/20261031T063013399593Z/run.json"
+bars = "data/market/shfe_all_registered_2020_2025/bars.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+methodology = "docs/capacity_methodology.md"
+output = "reports/runs/capacity_study"
+
+[input_hashes]
+source_run = "6400702e470e4c42f40a708d518a1b6b10938b4a32004caeb1a28fb6fc34aab7"
+bars = "a584b8bbf530b9b86ac7595dee67462f99c904f51ad95b22338c12ab676078f5"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+
+[study]
+volume_window_sessions = 20
+past_volume_fractions = [0.01, 0.05]
+cost_bps = 5.0
+margin_rate = 0.2
+initial_cash = 10000000.0
+max_margin_fraction = 0.5
+capacity_policy = "staged"
+keep_original_signals_contracts_targets = true
+independent_new_sample = false
+formal_p_value_computed = false
+actual_execution_certified = false

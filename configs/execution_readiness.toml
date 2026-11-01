@@ -1,0 +1,107 @@
+# Bounded execution-source readiness assay; no new forecast or investment tests.
+registered_utc = "2026-10-30T12:16:10+00:00"
+[paths]
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+prior_exploration = "reports/runs/nbs_prediction/20261030T101225331546Z/registered_exploration.csv"
+seed = "data/market/shfe_probe_20261029"
+raw = "data/market/execution_probe_20261030"
+output = "reports/runs/execution_readiness"
+[input_hashes]
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+prior_exploration = "f07e46db47afbcf55bf9158954f0bfd7eb8b932bfe8a3dc3691e7f2331c1f2f5"
+[study]
+kind = "dated_execution_source_readiness_only"
+prediction_tests_added = 0
+registered_exploration_family_size_unchanged = 15
+historical_first_vintage_certified = false
+actual_fill_certified = false
+real_investment_backtests = 0
+fee_dates = ["2024-05-30", "2024-05-31", "2024-06-03"]
+fee_contracts = ["rb2408", "rb2409", "rb2410"]
+margin_dates = ["2025-01-24", "2025-01-27", "2025-02-05", "2025-02-06"]
+margin_contracts = ["cu2503", "rb2505"]
+[collection]
+minimum_interval_seconds = 1.0
+maximum_response_bytes = 3000000
+maximum_new_requests = 14
+stop_after_consecutive_failures = 3
+[[sources]]
+id = "rb2410_april"
+kind = "notice"
+url = "https://www.shfe.com.cn/publicnotice/notice/202403/t20240328_801527.html"
+[[sources]]
+id = "rb_offcycle_may"
+kind = "notice"
+url = "https://www.shfe.com.cn/publicnotice/notice/202405/t20240529_801782.html"
+[[sources]]
+id = "cny2025"
+kind = "notice"
+url = "https://www.shfe.cn/publicnotice/notice/202501/t20250122_824396.html"
+[[sources]]
+id = "current_hours"
+kind = "current_hours"
+url = "https://www.shfe.com.cn/services/calenderandholidays/tradinghours/"
+[[sources]]
+id = "trading_20250124"
+kind = "trading"
+date = "20250124"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/ContractDailyTradeArgument20250124.dat"
+[[sources]]
+id = "trading_20250127"
+kind = "trading"
+date = "20250127"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/ContractDailyTradeArgument20250127.dat"
+[[sources]]
+id = "trading_20250205"
+kind = "trading"
+date = "20250205"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/ContractDailyTradeArgument20250205.dat"
+[[sources]]
+id = "trading_20250206"
+kind = "trading"
+date = "20250206"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/ContractDailyTradeArgument20250206.dat"
+[[sources]]
+id = "settlement_20240531"
+kind = "settlement"
+date = "20240531"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20240531.dat"
+[[sources]]
+id = "settlement_20240603"
+kind = "settlement"
+date = "20240603"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20240603.dat"
+[[sources]]
+id = "settlement_20250124"
+kind = "settlement"
+date = "20250124"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20250124.dat"
+[[sources]]
+id = "settlement_20250127"
+kind = "settlement"
+date = "20250127"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20250127.dat"
+[[sources]]
+id = "settlement_20250205"
+kind = "settlement"
+date = "20250205"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20250205.dat"
+[[sources]]
+id = "settlement_20250206"
+kind = "settlement"
+date = "20250206"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20250206.dat"
+[[sources]]
+id = "trading_20240130_seed"
+kind = "trading"
+date = "20240130"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/ContractDailyTradeArgument20240130.dat"
+seed_file = "trading_20240130.txt"
+seed_sha256 = "e6b8973af4ec5bfea694214c641f19fec128f517e79edafbd3f1c7edc01a4034"
+[[sources]]
+id = "settlement_20240130_seed"
+kind = "settlement"
+date = "20240130"
+url = "https://www.shfe.com.cn/data/busiparamdata/future/Settlement20240130.dat"
+seed_file = "settlement_20240130.txt"
+seed_sha256 = "ebdf36efc56fb419d356e4917b501ef0e93404f02d037042b044d20caa69bd8c"

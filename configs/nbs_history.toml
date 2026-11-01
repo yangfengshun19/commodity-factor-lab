@@ -1,0 +1,40 @@
+# Full source-history construction only. No new prediction tests.
+registered_utc = "2026-10-30T07:15:03.398846+00:00"
+[paths]
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+prior_exploration = "reports/runs/position_availability/20261029T083240032956Z/registered_exploration.csv"
+seed = "data/market/nbs_reference_probe_20261030"
+raw = "data/market/nbs_history_2020_2025"
+output = "reports/runs/nbs_history"
+[input_hashes]
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+prior_exploration = "934dd70469d099c3f95e0f73e10c558bc39fd744121d7edfc518fd6bbafecf8f"
+[history]
+first_year = 2020
+last_year = 2025
+parts = ["early", "middle", "late"]
+kind = "official_industrial_reference_history_only"
+prediction_tests_added = 0
+predictive_statistics_computed = false
+minimum_assets_unchanged = 8
+allow_missing_release_reconstruction = false
+allow_url_date_as_publication = false
+allow_unregistered_universe_expansion = false
+[discovery]
+index = "https://www.stats.gov.cn/sj/zxfb/"
+schedule_index = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/"
+maximum_index_pages = 160
+maximum_requests = 190
+[collection]
+minimum_interval_seconds = 1.0
+maximum_response_bytes = 3000000
+maximum_attempts_per_url = 2
+stop_after_consecutive_failures = 3
+maximum_release_requests = 230
+[quality]
+expected_products_per_release = 50
+strict_spot_basis_claim_eligible = false
+historical_first_vintage_certified = false
+complete_only_when_all_periods_accounted = true

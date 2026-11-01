@@ -1,0 +1,23 @@
+[paths]
+# One canonical price source. Never merge prices from different factor snapshots.
+data = "data/raw"
+output = "reports/runs/study"
+
+[study]
+start = "2023-01-01"
+end = "2025-10-09"
+training_sessions = 252
+test_sessions = 63
+history_sessions = 252
+publication_lag_sessions = 1
+rebalance_sessions = 5
+groups = 3
+min_assets = 6
+min_median_volume = 5000
+min_inference_obs = 252
+min_ic_obs = 60
+hac_lags = 10
+bootstrap_repetitions = 1000
+primary_cost_bps = 5.0
+cost_scenarios_bps = [0.0, 5.0, 10.0, 20.0]
+sectors = ["all_commodities", "agriculture", "energy_chemicals", "nonferrous", "ferrous"]

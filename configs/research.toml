@@ -1,0 +1,24 @@
+# Paths are relative to this config file's parent directory (the project root).
+[paths]
+data = "data/raw"
+output = "reports/runs/research"
+
+[research]
+families = ["spread", "warrant", "basis", "trend", "positioning", "value", "volatility"]
+include_financial = false
+start = "2023-01-01"
+end = "2025-10-10"
+test_start = "2025-01-01"
+groups = 5
+min_assets = 5
+trading_days = 252
+# Historical snapshots lack release timestamps. Add one full session before
+# a signal becomes eligible for execution at the following session's open.
+publication_lag_sessions = 1
+fee_bps = 3.0
+slippage_bps = 2.0
+min_history_days = 60
+
+# Signs are fixed before analysis. No full-sample IC-based sign selection.
+# Add a hypothesis here when starting a new experiment, e.g. Val_oneyear = -1.
+[directions]

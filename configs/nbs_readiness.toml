@@ -1,0 +1,81 @@
+# Readiness assay; source browsing has already exposed some prices. No predictive tests.
+registered_utc = "2026-10-30T02:22:03.956141+00:00"
+[paths]
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+prior_exploration = "reports/runs/position_availability/20261029T083240032956Z/registered_exploration.csv"
+raw = "data/market/nbs_reference_probe_20261030"
+output = "reports/runs/nbs_readiness"
+[input_hashes]
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+prior_exploration = "934dd70469d099c3f95e0f73e10c558bc39fd744121d7edfc518fd6bbafecf8f"
+[study]
+kind = "industrial_reference_source_readiness_only"
+prediction_tests_added = 0
+predictive_statistics_computed = false
+minimum_assets_unchanged = 8
+allow_url_date_as_publication = false
+allow_missing_release_inversion = false
+strict_spot_basis_claim_eligible = false
+published_reference_is_executable_spot = false
+[collection]
+minimum_interval_seconds = 1.0
+maximum_response_bytes = 3000000
+maximum_requests = 11
+stop_after_consecutive_failures = 3
+[negative_controls]
+unpublished_periods = ["2024-02-middle", "2025-01-late"]
+allow_reconstruction_from_later_change = false
+[[sources]]
+id = "2020-01-early"
+kind = "release"
+period = "2020-01-early"
+url = "https://www.stats.gov.cn/sj/zxfb/202302/t20230203_1900591.html"
+[[sources]]
+id = "2023-12-middle"
+kind = "release"
+period = "2023-12-middle"
+url = "https://www.stats.gov.cn/sj/zxfb/202312/t20231222_1945723.html"
+[[sources]]
+id = "2024-01-late"
+kind = "release"
+period = "2024-01-late"
+url = "https://www.stats.gov.cn/sj/zxfb/202402/t20240202_1947216.html"
+[[sources]]
+id = "2024-02-early"
+kind = "release"
+period = "2024-02-early"
+url = "https://www.stats.gov.cn/sj/zxfb/202402/t20240207_1947532.html"
+[[sources]]
+id = "2024-02-late"
+kind = "release"
+period = "2024-02-late"
+url = "https://www.stats.gov.cn/sj/zxfb/202403/t20240304_1948066.html"
+[[sources]]
+id = "2024-12-late"
+kind = "release"
+period = "2024-12-late"
+url = "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250103_1958140.html"
+[[sources]]
+id = "2025-01-early"
+kind = "release"
+period = "2025-01-early"
+url = "https://www.stats.gov.cn/sj/zxfb/202501/t20250114_1958197.html"
+[[sources]]
+id = "2025-12-late"
+kind = "release"
+period = "2025-12-late"
+url = "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260104_1962240.html"
+[[sources]]
+id = "holiday_2024"
+kind = "methodology"
+url = "https://www.stats.gov.cn/hd/lyzx/zxgk/202405/t20240524_1954120.html"
+[[sources]]
+id = "schedule_2025"
+kind = "methodology"
+url = "https://www.stats.gov.cn/sj/fbrc/ljxxfb/202412/t20241230_1957931.html"
+[[sources]]
+id = "definition_faq"
+kind = "methodology"
+url = "https://www.stats.gov.cn/hd/cjwtjd/202302/t20230207_1902269.html"

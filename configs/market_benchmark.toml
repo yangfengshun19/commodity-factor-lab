@@ -1,0 +1,66 @@
+# Retrospective protocol. Historical outcomes were already viewed in earlier studies.
+[paths]
+bars = "data/market/shfe_all_registered_2020_2025/bars.csv"
+bars_manifest = "data/market/shfe_all_registered_2020_2025/manifest.json"
+curves = "reports/runs/curve_expanded/20261029T045315046146Z/curves.csv"
+curve_run = "reports/runs/curve_expanded/20261029T045315046146Z/run.json"
+calendar = "reports/runs/curve_expanded/20261029T045315046146Z/calendar_assumption.csv"
+prior_exploration = "reports/runs/nbs_prediction/20261030T101225331546Z/registered_exploration.csv"
+output = "reports/runs/market_benchmark"
+
+[input_hashes]
+bars = "a584b8bbf530b9b86ac7595dee67462f99c904f51ad95b22338c12ab676078f5"
+bars_manifest = "216b225d5798cf5f4c20c2542beb71ef4d3d59f2c215d0ea0478c9406e0814eb"
+curves = "62aa5d2e2324806c9c28b38e1b98520c044543ad732f54f3fb841bf75056b557"
+curve_run = "6615983a3848feb2a3ef86fca0400a8fd3722a6ee92912f2be244b9024052433"
+calendar = "0c66a7ce53173468215b72a35945730fb04181e0ac7bbcbbc0843802e59cd39c"
+prior_exploration = "f07e46db47afbcf55bf9158954f0bfd7eb8b932bfe8a3dc3691e7f2331c1f2f5"
+
+[study]
+start = "2023-01-01"
+end = "2025-12-31"
+codes = ["cu", "al", "zn", "rb", "hc", "ru", "bu", "sp", "au", "ag"]
+books = ["equal_weight_long", "momentum", "momentum_carry"]
+min_assets = 8
+rebalance_sessions = 5
+initial_cash = 10000000.0
+gross_notional_on_initial_cash = 1.0
+blend_momentum_weight = 0.5
+blend_carry_weight = 0.5
+annualization_sessions = 252
+
+[execution]
+one_way_all_in_cost_bps = [0.0, 5.0, 10.0, 20.0]
+margin_rates = [0.2, 0.4]
+max_margin_fraction = 0.5
+fill_scenarios = ["assumed_full_open", "block_flat_ohlc"]
+primary_cost_bps = 5.0
+primary_margin_rate = 0.2
+primary_fill_scenario = "assumed_full_open"
+clock_kind = "synthetic_event_order_not_actual_session_times"
+missing_required_mark = "fail_entire_run_without_filling_or_dropping"
+terminal_policy = "liquidate_at_last_recorded_open_no_new_target"
+
+# Static monetary multipliers are disclosed retrospective assumptions; the
+# complete 2020-2025 contract-specification change history is NOT certified.
+[multipliers]
+cu = 5.0
+al = 5.0
+zn = 5.0
+rb = 10.0
+hc = 10.0
+ru = 10.0
+bu = 10.0
+sp = 10.0
+au = 1000.0
+ag = 15.0
+
+[evaluation]
+primary = "net_pnl_difference_blend_minus_momentum_on_initial_cash"
+formal_p_value_computed = false
+independent_new_sample = false
+historical_first_vintage_certified = false
+actual_execution_certified = false
+registered_experiments_before = 15
+registered_experiments_after = 16
+new_descriptive_experiment_counts_as_p_one = true

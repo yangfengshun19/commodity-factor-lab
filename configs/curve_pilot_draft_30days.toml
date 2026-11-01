@@ -1,0 +1,31 @@
+# Retired draft: calendar-day expiry buffer did not cover the prediction horizon.
+# Fixed before running the revised contract-characteristic diagnostics.
+# A retrospective protocol, not a claim of prior preregistration.
+[paths]
+bars = "data/market/shfe_pilot_2020_2025/bars.csv"
+metadata = "data/market/shfe_metadata_v2_20261029/metadata.csv"
+warrants = "data/market/shfe_warrants_weekly_2020_2025/warrants.csv"
+output = "reports/runs/curve_pilot"
+
+[study]
+codes = ["cu", "al", "zn", "rb", "hc", "ru"]
+start = "2020-01-01"
+end = "2025-12-31"
+evaluation_start = "2023-01-01"
+holding_sessions = 20
+entry_lag_sessions = 1
+min_assets = 6
+hac_lags = 40
+min_inference_obs = 252
+information_cutoff_local = "20:30:00"
+retrospective_bar_availability = true
+inventory_min_seasons = 3
+inventory_min_observations = 24
+
+[curve]
+min_days = 30
+max_days = 540
+min_volume = 100
+min_open_interest = 1000
+momentum_sessions = 126
+basis_momentum_sessions = 252

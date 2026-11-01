@@ -1,0 +1,19 @@
+[paths]
+data = "data/demo"
+output = "reports/runs/demo"
+
+[research]
+families = ["trend", "value", "volatility"]
+include_financial = false
+start = "2022-01-01"
+end = "2024-12-31"
+test_start = "2024-01-01"
+groups = 5
+min_assets = 5
+trading_days = 252
+publication_lag_sessions = 0
+fee_bps = 3.0
+slippage_bps = 2.0
+min_history_days = 60
+
+[directions]
